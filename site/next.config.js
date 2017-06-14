@@ -6,7 +6,11 @@ module.exports = {
   webpack: (config, { dev }) => {
     // Perform customizations to webpack config
     config.resolve.modules = [
+<<<<<<< HEAD
       "node_modules"
+=======
+      "node_modules", "../packages", "ui"
+>>>>>>> b9fd6f233c9a0e1a222643f8ce30f42159c0025f
     ]
 
     // Important: return the modified config
