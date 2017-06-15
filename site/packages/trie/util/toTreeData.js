@@ -1,11 +1,19 @@
 import _ from 'lodash';
 
-export default function fromTrie(trie, previous = "") {
+function fromTrieChildren(trie, previous = "") {
   return Object.keys(trie.edges).map(d => {
     const prev = previous + d;
     return {
       name: prev,
-      children: fromTrie(trie.edges[d], prev)
+      children: fromTrieChildren(trie.edges[d], prev)
     }
   });
+}
+
+export default function fromTrie(trie, previous = "") {
+  const children = fromTrieChildren(trie);
+  return [{
+    name: "<root>",
+    children: children
+  }]
 }

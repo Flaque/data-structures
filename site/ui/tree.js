@@ -6,8 +6,8 @@ import { hierarchy } from 'd3-hierarchy';
 
 
 function Node({ node, events }) {
-  const width = 40;
-  const height = 20;
+  const width = 55;
+  const height = 23;
   const cornerRadius = 5;
   const color = "#2980b9";
   const textColor = "white";
@@ -27,8 +27,8 @@ function Node({ node, events }) {
       />
       <text
         dy={".33em"}
-        fontSize={9}
-        fontFamily={"Helvetica"}
+        fontSize={13}
+        fontFamily={"Courier New"}
         textAnchor={"middle"}
         style={{ pointerEvents: "none"}}
         fill={textColor}
@@ -40,7 +40,7 @@ function Node({ node, events }) {
 }
 
 function Link({ link }) {
-  const color = "black";
+  const color = "#ddd";
   return (
     <LinkHorizontal
       data={link}
@@ -70,7 +70,9 @@ class TreeGraph extends React.Component {
 
   render() {
     return (
-      <svg width={this.props.width} height={this.props.height}>
+      <svg width={this.props.width} height={this.props.height} style={{
+        margin: "auto"
+      }}>
         <Tree
           top={this.margin.top}
           left={this.margin.left}
