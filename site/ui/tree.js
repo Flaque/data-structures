@@ -9,7 +9,7 @@ function Node({ node, events }) {
   const width = 55;
   const height = 23;
   const cornerRadius = 5;
-  const color = "#2980b9";
+  const color = "#5764c6";
   const textColor = "white";
 
   return (
@@ -56,11 +56,6 @@ class TreeGraph extends React.Component {
   constructor(props) {
     super(props);
 
-    const data = hierarchy(props.data);
-    this.state = {
-      data : data
-    }
-
     this.margin = props.margin;
     this.size = [
       props.height - this.margin.top - this.margin.bottom,
@@ -71,12 +66,12 @@ class TreeGraph extends React.Component {
   render() {
     return (
       <svg width={this.props.width} height={this.props.height} style={{
-        margin: "auto"
+        margin: "auto",
       }}>
         <Tree
           top={this.margin.top}
           left={this.margin.left}
-          root={this.state.data}
+          root={hierarchy(this.props.data)}
           size={this.size}
           nodeComponent={Node}
           linkComponent={Link}

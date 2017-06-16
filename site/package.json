@@ -12,8 +12,9 @@
     "@vx/hierarchy": "0.0.119",
     "@vx/shape": "0.0.119",
     "d3-hierarchy": "^1.1.5",
-    "next": "beta",
+    "next": "^2.4.2",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "spectre.css": "^0.2.14"
   }
 }
