@@ -1,6 +1,9 @@
 import TrieWithButtons from '../TrieWithButtons.js';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
+/**
+ * Describes the basic functions of a trie.
+ */
 export default () => (
   <div id="basic-functions">
 

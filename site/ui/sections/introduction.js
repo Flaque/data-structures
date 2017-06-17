@@ -1,5 +1,8 @@
 import TrieWithButtons from '../TrieWithButtons.js';
 
+/**
+ * Introduction section
+ */
 export default () => (
   <div id="introduction">
 

@@ -1,9 +1,8 @@
-import React from 'react';
-import { Group } from '@vx/group';
-import { Tree } from '@vx/hierarchy';
-import { LinkHorizontal } from '@vx/shape';
-import { hierarchy } from 'd3-hierarchy';
-
+import React from "react";
+import { Group } from "@vx/group";
+import { Tree } from "@vx/hierarchy";
+import { LinkHorizontal } from "@vx/shape";
+import { hierarchy } from "d3-hierarchy";
 
 function Node({ node, events }) {
   const width = 55;
@@ -30,7 +29,7 @@ function Node({ node, events }) {
         fontSize={13}
         fontFamily={"Courier New"}
         textAnchor={"middle"}
-        style={{ pointerEvents: "none"}}
+        style={{ pointerEvents: "none" }}
         fill={textColor}
       >
         {node.data.name}
@@ -42,17 +41,11 @@ function Node({ node, events }) {
 function Link({ link }) {
   const color = "#ddd";
   return (
-    <LinkHorizontal
-      data={link}
-      stroke={color}
-      strokeWidth="1"
-      fill="none"
-    />
-  )
+    <LinkHorizontal data={link} stroke={color} strokeWidth="1" fill="none" />
+  );
 }
 
 class TreeGraph extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -65,9 +58,13 @@ class TreeGraph extends React.Component {
 
   render() {
     return (
-      <svg width={this.props.width} height={this.props.height} style={{
-        margin: "auto",
-      }}>
+      <svg
+        width={this.props.width}
+        height={this.props.height}
+        style={{
+          margin: "auto"
+        }}
+      >
         <Tree
           top={this.margin.top}
           left={this.margin.left}
@@ -77,7 +74,7 @@ class TreeGraph extends React.Component {
           linkComponent={Link}
         />
       </svg>
-    )
+    );
   }
 }
 
