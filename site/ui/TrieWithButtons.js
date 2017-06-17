@@ -4,6 +4,12 @@ import Trie from '../packages/trie/index.js';
 import toTreeData from '../packages/trie/util/toTreeData.js';
 
 const trie = new Trie();
+const margin = {
+  top: 40,
+  left: 50,
+  right: 50,
+  bottom: 40,
+};
 
 class TrieWithButtons extends React.Component {
 
@@ -40,7 +46,9 @@ class TrieWithButtons extends React.Component {
     ));
 
     return (
-      <div>
+      <div style={{
+        "margin-bottom": "25px",
+      }}>
         <div style={{
           background: "#eff1fa",
           margin: "25px 0",
@@ -49,7 +57,7 @@ class TrieWithButtons extends React.Component {
           <TreeGraph
             width={this.props.width}
             height={this.props.height}
-            margin={this.props.margin}
+            margin={margin}
             data={this.state.data}
           />
         </div>
