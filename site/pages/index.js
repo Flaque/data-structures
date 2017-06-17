@@ -7,8 +7,6 @@ import SiteHead from '../ui/SiteHead.js';
 import Introduction from '../ui/sections/introduction.js';
 import BasicFunctions from '../ui/sections/BasicFunctions.js';
 
-
-
 class App extends React.Component {
 
   render() {
@@ -28,7 +26,6 @@ class App extends React.Component {
     )
   }
 }
-
 
 export default () => (
   <App />

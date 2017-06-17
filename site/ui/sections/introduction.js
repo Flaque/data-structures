@@ -4,7 +4,7 @@ export default () => (
   <div id="introduction">
 
     <h1>The Trie Data Structure</h1>
-    <h3>An Interactive Explaination</h3>
+    <h3>An Interactive Explanation</h3>
 
     <p>
       A Trie (pronounced "try") is a tree data structure that is used to store Strings. It's generally used to search and store by prefix, which is why it is also known as a "prefix tree."
@@ -15,7 +15,7 @@ export default () => (
     </p>
 
     <p>
-      This guide will feature written explainations, code samples, and interactive working Tries. You can find the code for the guide itself <a href="https://github.com/Flaque/data-structures"> on Github</a>, along with it's implementation of a <a href="https://github.com/Flaque/data-structures/blob/master/site/packages/trie/index.js">Trie in Javascript.</a>
+      This guide will feature written explanation, code samples, and interactive working Tries. You can find the code for the guide itself <a href="https://github.com/Flaque/data-structures"> on Github</a>, along with it's implementation of a <a href="https://github.com/Flaque/data-structures/blob/master/site/packages/trie/index.js">Trie in Javascript.</a>
     </p>
 
     <p>
