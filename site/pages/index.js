@@ -13,29 +13,7 @@ const margin = {
   bottom: 40,
 }
 
-const trie = new Trie()
-
 class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-
-    const data = toTreeData(trie)[0];
-
-    this.state = {
-      data : data
-    }
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    trie.add(event.target.value)
-
-    this.setState({
-        data: toTreeData(trie)[0]
-      });
-  }
 
   render() {
     return (
@@ -50,11 +28,8 @@ class App extends React.Component {
           width={600}
           height={300}
           margin={margin}
-          data={this.state.data}
+          words={["cats", "hats", "hall"]}
         />
-
-        <input type="text" onChange={this.handleChange}>
-        </input>
       </div>
     )
   }

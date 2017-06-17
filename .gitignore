@@ -1,7 +1,4 @@
 .DS_Store
 ./site/.next/*
-<<<<<<< HEAD
 .next
-=======
->>>>>>> b9fd6f233c9a0e1a222643f8ce30f42159c0025f
 node_modules
