@@ -11,11 +11,11 @@ export default () => (
     </p>
 
     <p>
-      Trie's can often come up in software engineering interviews, however they aren't generally taught in a typical Data Structures course. Like all data structures, they're often better understood by interacting with them.
+      Tries can often come up in software engineering interviews, however they aren't generally taught in a typical Data Structures course. Like all data structures, they're often better understood by interacting with them.
     </p>
 
     <p>
-      This guide will feature written explainations, code samples, and interactive working Trie's. You can find the code for the guide itself <a href="https://github.com/Flaque/data-structures"> on Github</a>, along with it's implementation of a <a href="https://github.com/Flaque/data-structures/blob/master/site/packages/trie/index.js">Trie in Javascript.</a>
+      This guide will feature written explainations, code samples, and interactive working Tries. You can find the code for the guide itself <a href="https://github.com/Flaque/data-structures"> on Github</a>, along with it's implementation of a <a href="https://github.com/Flaque/data-structures/blob/master/site/packages/trie/index.js">Trie in Javascript.</a>
     </p>
 
     <p>
