@@ -1,5 +1,5 @@
 import TrieWithButtons from '../TrieWithButtons.js';
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import CodeBlock from '../CodeBlock.js';
 
 /**
  * Describes the basic functions of a trie.
@@ -15,8 +15,7 @@ export default () => (
 
     <h5> Pseudocode </h5>
 
-    <div className="code-wrapper">
-      <SyntaxHighlighter language="python">
+    <CodeBlock>
        {`
   def insert(word):
 
@@ -32,8 +31,7 @@ export default () => (
     word = word.removeFirstLetter()
     this.children[firstLetter].add(word)
        `}
-      </SyntaxHighlighter>
-    </div>
+    </CodeBlock>
 
     <h5> Demo </h5>
 
@@ -45,8 +43,30 @@ export default () => (
 
     <h4><code>Find()</code></h4>
     <p>
-      // TODO
+      The find method of a Trie works in the same way that most other tree structures work. Take the first letter of the word you're looking for and see if that exists as a child node. If it doesn't, you can stop, as that word does not exist in the Trie. Otherwise, find the node with that letter and search it's children for the next lettter. If you've run out of letters, then you've your item.
     </p>
+
+    <h5> Pseudocode </h5>
+
+    <CodeBlock>
+      {`
+  def find(word):
+
+    # Step 1: Do a check to see we've found the node
+    if isEmptyString(word) return true;
+
+    # Step 2: Check to see if we've hit a letter that's not
+    #         in the children of the current node
+    const firstLetter = word[0];
+    if not this.children[firstLetter]:
+      return false;
+    else:
+
+      # Step 3: Pop off the first letter and continue searching
+      word = word.removeFirstLetter()
+      return this.children[firstLetter].has(word)
+      `}
+    </CodeBlock>
 
   </div>
 )
