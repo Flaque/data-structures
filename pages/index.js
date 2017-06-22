@@ -1,10 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import TreeGraph from "../ui/tree.js";
-import Trie from "../packages/trie/index.js";
-import toTreeData from "../packages/trie/util/toTreeData.js";
 import SiteHead from "../ui/SiteHead.js";
-import Introduction from "../ui/sections/introduction.js";
+import Introduction from "../ui/sections/Introduction.js";
 import BasicFunctions from "../ui/sections/BasicFunctions.js";
 
 class App extends React.Component {

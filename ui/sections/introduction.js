@@ -1,5 +1,3 @@
-import TrieWithButtons from '../TrieWithButtons.js';
-
 /**
  * Introduction section
  */

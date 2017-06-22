@@ -3,47 +3,8 @@ import { Group } from "@vx/group";
 import { Tree } from "@vx/hierarchy";
 import { LinkHorizontal } from "@vx/shape";
 import { hierarchy } from "d3-hierarchy";
-
-function Node({ node, events }) {
-  const width = 55;
-  const height = 23;
-  const cornerRadius = 5;
-  const color = "#5764c6";
-  const textColor = "white";
-
-  return (
-    <Group top={node.x} left={node.y}>
-      <rect
-        height={height}
-        width={width}
-        y={-height / 2}
-        x={-width / 2}
-        fill={color}
-        stroke={color}
-        strokeWidth={1}
-        rx={cornerRadius}
-        ry={cornerRadius}
-      />
-      <text
-        dy={".33em"}
-        fontSize={13}
-        fontFamily={"Courier New"}
-        textAnchor={"middle"}
-        style={{ pointerEvents: "none" }}
-        fill={textColor}
-      >
-        {node.data.name}
-      </text>
-    </Group>
-  );
-}
-
-function Link({ link }) {
-  const color = "#ddd";
-  return (
-    <LinkHorizontal data={link} stroke={color} strokeWidth="1" fill="none" />
-  );
-}
+import Node from './Node.js';
+import Link from './Link.js';
 
 class TreeGraph extends React.Component {
   constructor(props) {

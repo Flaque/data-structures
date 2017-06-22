@@ -1,5 +1,5 @@
 import React from "react";
-import TreeGraph from "./tree.js";
+import TreeGraph from "./TreeGraph.js";
 import Trie from "../packages/trie/index.js";
 import toTreeData from "../packages/trie/util/toTreeData.js";
 import ToggleButton from './ToggleButton.js';
