@@ -1,4 +1,5 @@
 import TrieWithButtons from '../TrieWithButtons.js';
+import TrieWithSearch from '../TrieWithSearch.js';
 import CodeBlock from '../CodeBlock.js';
 
 /**
@@ -67,6 +68,12 @@ export default () => (
       return this.children[firstLetter].has(word)
       `}
     </CodeBlock>
+
+    <TrieWithSearch
+      width={600}
+      height={300}
+      words={['rat', 'rag', 'rep', 'cat']}
+    />
 
   </div>
 )

@@ -3,12 +3,17 @@
  */
 import { Group } from "@vx/group";
 
+const primaryColor = "#5764c6";
+const highlightColor = "#e06870";
+
 export default function Node({ node, events }) {
   const width = 55;
   const height = 23;
   const cornerRadius = 5;
-  const color = "#5764c6";
   const textColor = "white";
+  const color = (node.data.highlighted)
+    ? highlightColor
+    : primaryColor;
 
   return (
     <Group top={node.x} left={node.y}>

@@ -2,7 +2,9 @@ import React from "react";
 import TreeGraph from "./TreeGraph.js";
 import Trie from "../packages/trie/index.js";
 import toTreeData from "../packages/trie/util/toTreeData.js";
+import toHighlightedTreeData from "../packages/trie/util/toHighlightedTreeData.js";
 import ToggleButton from './ToggleButton.js';
+import TrieUI from './TrieUI.js';
 
 let trie = new Trie();
 const margin = {
@@ -22,6 +24,10 @@ function createTrie(words) {
   return trie;
 }
 
+function getData(trie) {
+  return toTreeData(trie)[0];
+}
+
 /**
  * A trie with buttons to activate specific words.
  */
@@ -29,7 +35,7 @@ class TrieWithButtons extends React.Component {
   constructor(props) {
     super(props);
 
-    const data = toTreeData(trie)[0];
+    const data = getData(trie, new Boolean(props.isHighlighted));
 
     this.state = {
       data: data,
@@ -49,7 +55,7 @@ class TrieWithButtons extends React.Component {
   setWords(activeWords) {
     const trie = createTrie(activeWords);
     this.setState({
-      data: toTreeData(trie)[0],
+      data: getData(trie),
       activeWords,
     })
   }
@@ -102,20 +108,10 @@ class TrieWithButtons extends React.Component {
           "margin-bottom": "25px"
         }}
       >
-        <div
-          style={{
-            background: "#eff1fa",
-            margin: "25px 0",
-            "border-radius": "5px"
-          }}
-        >
-          <TreeGraph
-            width={this.props.width}
-            height={this.props.height}
-            margin={margin}
-            data={this.state.data}
-          />
-        </div>
+        <TrieUI
+          data={this.state.data}
+          width={this.props.width}
+          height={this.props.height}/>
 
         <div className="btn-group btn-group-block">
           {buttons}
